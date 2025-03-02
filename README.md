@@ -1,4 +1,4 @@
-# 🎁 Amigo Secreto
+# 🎁 Challenge Amigo Secreto
 
 Este es un proyecto interactivo en JavaScript que permite a los usuarios agregar nombres de amigos y realizar un sorteo aleatorio para elegir un "Amigo Secreto".
 

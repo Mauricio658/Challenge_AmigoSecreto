@@ -6,11 +6,12 @@ function  agregarAmigo() {
 
     if(document.querySelector('#amigo').value === '' || !isNaN(nombreAmigoUsuario)){
         alert("Por favor inserta un nombre valido");
+        limpiarCaja();
     }else{
         listaAmigos.push(nombreAmigoUsuario);
         recorrerLista(); //Modificar lista
         limpiarCaja();
-        console.log(listaAmigos);
+        //console.log(listaAmigos);
     }
 
 }
@@ -37,7 +38,7 @@ function sortearAmigo() {
     }
 
     let indiceAleatorio = Math.floor(Math.random() * listaAmigos.length); // Generar índice aleatorio
-    console.log(indiceAleatorio);
+    //console.log(indiceAleatorio);
     let amigoSorteado = listaAmigos[indiceAleatorio]; // Obtener el nombre aleatorio
 
     // Mostrar el resultado en la lista de resultados
