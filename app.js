@@ -2,18 +2,20 @@
 let listaAmigos= [];
 
 function  agregarAmigo() {
-    let nombreAmigoUsuario = document.getElementById('amigo').value.trim();
-
+    let nombreAmigoUsuario = document.getElementById('amigo').value.toLowerCase().trim();  //El nombre pasa a minusculas.
     if(document.querySelector('#amigo').value === '' || !isNaN(nombreAmigoUsuario)){
+        limpiarCaja();
         alert("Por favor inserta un nombre valido");
-        limpiarCaja();
     }else{
-        listaAmigos.push(nombreAmigoUsuario);
-        recorrerLista(); //Modificar lista
-        limpiarCaja();
-        //console.log(listaAmigos);
+        if(listaAmigos.includes(nombreAmigoUsuario)){ //Evitar duplicidad
+            alert(`El amigo ${nombreAmigoUsuario} ya esta en la lista`);
+        }else{
+            listaAmigos.push(nombreAmigoUsuario);
+            recorrerLista(); //Modificar lista
+            limpiarCaja();
+            //console.log(listaAmigos);
+        }
     }
-
 }
 
 function limpiarCaja() { //Funcion para limpiar el campo de texto
